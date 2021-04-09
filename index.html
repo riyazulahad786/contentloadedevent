@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title> content loading </title>
+
+    </head>
+    <body>
+        <script>
+            function dom(){
+                const myTitle = document.getElementById('myTitle');
+                console.log(myTitle);
+
+             }
+             if (document.readyState ==='loading'){
+                 document.addEventListener('domcontentloaded',dom);
+
+
+             } else{
+                 dom();
+
+             }
+        </script>
+        <h1 id="myTitle">dom content loaded event </h1>
+    
+    </body>
+</html>
